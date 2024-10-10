@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const RoutesClientes = require("../routes/clientsRoutes");
+const RoutesClientes = require("./routes/clientsRoutes");
 
 app.all("*", (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
