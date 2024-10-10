@@ -9,6 +9,8 @@ app.use(express.urlencoded({ extended: true }));
 
 const RoutesClientes = require("./routes/clientsRoutes");
 
+app.use("/", RoutesClientes);
+
 app.all("*", (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
@@ -23,7 +25,6 @@ app.all("*", (req, res, next) => {
   );
   next();
 });
-app.use("/", RoutesClientes);
 
 // Exporta el handler para Vercel
 module.exports = app;
