@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const RoutesClientes = require("./routes/clientsRoutes"); // Asegúrate de que la ruta sea correcta
-app.use("/api", RoutesClientes);
+app.use(RoutesClientes);
 
 app.all("*", (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
