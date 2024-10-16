@@ -2,9 +2,7 @@ const express = require("express");
 const router = express.Router();
 const clientControllers = require("../controllers/clientsControllers");
 
-router.get("/", (req, res) => {
-  res.send({ message: "Welcome to fullstack-crud-auth0-back!" });
-});
+router.get("/", clientControllers.saludo);
 router.get("/clientes", clientControllers.getAllClients);
 router.post("/addClient", clientControllers.addClient);
 router.put("/dropClient/:ID", clientControllers.dropClient);

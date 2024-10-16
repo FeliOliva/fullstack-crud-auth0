@@ -1,6 +1,10 @@
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
+
+const saludo = (req, res) => {
+  res.send("Welcome to fullstack-crud-auth0-back!");
+}
 // Obtener todos los clientes
 const getAllClients = async (req, res) => {
   try {
@@ -84,6 +88,7 @@ const getClientsByID = async (req, res) => {
 };
 
 module.exports = {
+  saludo,
   getAllClients,
   addClient,
   dropClient,
