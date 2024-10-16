@@ -1,3 +1,17 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ],
+  "env": {
+    "DATABASE_URL": "postgresql://practicprogramacion_user:eszyc4uBfIQcpR9SIsR4tYqjQcRqPYsQ@dpg-cs27muogph6c738vrk0g-a.oregon-postgres.render.com:5432/practicprogramacion?schema=public&sslmode=require"
+  }
 }
