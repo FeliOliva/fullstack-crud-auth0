@@ -4,10 +4,10 @@ const clientControllers = require("../controllers/clientsControllers");
 
 router.get("/", clientControllers.saludo);
 router.get("/clientes", clientControllers.getAllClients);
-router.post("/addClient", clientControllers.addClient);
-router.put("/dropClient/:ID", clientControllers.dropClient);
-router.put("/upClient/:ID", clientControllers.upClient);
-router.put("/updateClients", clientControllers.updateClients);
 router.get("/getClientsByID/:ID", clientControllers.getClientsByID);
+router.post("/clientes", clientControllers.addClient);
+router.delete("/clientes/:ID", clientControllers.dropClient);
+router.post("/clientes/:ID", clientControllers.upClient);
+router.put("/updateClients", clientControllers.updateClients);
 
 module.exports = router;
